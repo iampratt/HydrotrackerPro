@@ -93,7 +93,7 @@ function App() {
               </div>
               <div className="text-center mb-4">
                 <span className="text-3xl font-bold">{Math.round(totalHydration)}</span>
-                <span className="text-xl"> / {waterGoal} ml</span>
+                <span className="text-xl"> / {waterGoal} L</span>
               </div>
 
               {Object.entries(fluids).map(([key, fluid]) => (
