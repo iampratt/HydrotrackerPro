@@ -30,7 +30,7 @@ function App() {
   } = useReminders();
 
   const totalHydration = calculateTotalHydration();
-  const progress = (totalHydration / waterGoal) * 100;
+  const progress = (totalHydration / waterGoal) * 100 / 1000;
 
   return (
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-blue-50 text-gray-900'}`}>
@@ -92,7 +92,7 @@ function App() {
                 />
               </div>
               <div className="text-center mb-4">
-                <span className="text-3xl font-bold">{Math.round(totalHydration)}</span>
+                <span className="text-3xl font-bold">{Math.round(totalHydration)/1000}</span>
                 <span className="text-xl"> / {waterGoal} L</span>
               </div>
 
